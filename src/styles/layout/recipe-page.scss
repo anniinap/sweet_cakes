@@ -1,0 +1,90 @@
+@use '../abstract/mixins' as *;
+@use "../abstract/variables" as *;
+
+.recipe-bg-image {
+    @include background-image("/src/assets/images/background/recipe-background-image-medium.jpg", 100vh, $light-background-color);
+}
+
+.with-relative-position {
+    position: relative;
+    z-index: 2;
+  }
+  
+.with-margin {
+    margin: 1rem;
+}
+
+#recipe-intro {
+    @extend .with-relative-position;
+
+    img {
+        @include rounded-card();
+    }
+    .difficulty-level i {
+        font-size: 0.9rem;
+        color: white;
+    }  
+    .page-nav {
+        transition: transform 0.3s ease, color 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    .page-nav:hover {
+        transform: scale(1.1);
+        color: $dark !important;
+    }
+
+}
+
+#recipe-ingredients {
+    @extend .with-relative-position;
+
+    .ingredients {
+        background-color: $semi-transparent-white;
+        @include rounded-card();
+        padding: 2rem;
+        margin: 2rem;
+    }
+    h3 {
+        margin: 0;
+    }
+    h5 {
+        margin-top: 1rem;
+    }
+
+    .form-check {
+        margin-bottom: 0.25rem;
+    }
+}
+
+#recipe-instructions {
+    @extend .with-relative-position;
+
+    .card {
+       @include rounded-card();
+        background-color: $semi-transparent-white-40;
+
+    }
+    .accordion-body ol li {
+        margin-bottom: 0.5rem;
+    }
+    .accordion-button:focus {
+        box-shadow: none; 
+        outline: none; 
+    }
+    .accordion-button:not(.collapsed) {
+        background-color: transparent; 
+        color: inherit; 
+    }
+    h3 {
+        @extend .with-margin;
+    }
+}
+
+.recipe-tips { 
+    .card {
+        @include rounded-card();
+        @extend .with-margin;
+    }
+}

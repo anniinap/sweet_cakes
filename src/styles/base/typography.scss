@@ -1,0 +1,17 @@
+@use "../abstract/variables" as *;
+
+// Navigation
+.navbar {
+  .navbar-brand {
+    font-family: $headings-font-family, sans-serif; 
+  }  
+}
+// Recipe page
+.recipe-page {
+  .form-check-label, .accordion-body ol li {
+    font-family: $recipe-font,  sans-serif;
+    font-size: 1.1rem;  
+  }
+}
+
+

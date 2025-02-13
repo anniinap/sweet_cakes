@@ -1,0 +1,44 @@
+@mixin rounded-card() {
+    border-radius: 2rem;
+    border: none;
+    
+  }
+
+  @mixin background-image($url, $min-height, $bg-color: null) {
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+    min-height: $min-height;
+
+    @if $bg-color {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $bg-color;
+            z-index: 1;
+        }
+    }
+}
+
+@mixin media($min-width: null, $max-width: null) {
+    @if $min-width and $max-width {
+        @media only screen and (min-width: $min-width) and (max-width: $max-width) {
+            @content;
+        }
+    } @else if $min-width {
+        @media only screen and (min-width: $min-width) {
+            @content;
+        }
+    } @else if $max-width {
+        @media only screen and (max-width: $max-width) {
+            @content;
+        }
+    }
+}
+

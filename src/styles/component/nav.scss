@@ -1,0 +1,33 @@
+@use "/src/styles/abstract/variables" as *;
+
+.navbar {
+    .navbar-toggler {
+        border: none;
+        background: transparent;
+        font-size: 1.1rem;
+    }
+    .navbar-toggler:focus, 
+    .navbar-toggler:active { 
+        outline: none; 
+        background: transparent; 
+        box-shadow: none; 
+    }
+    
+    
+    .fa-solid {
+        color: black;
+        font-size: 1.5rem; 
+    }  
+}
+
+.nav-link, .navbar-brand {
+    color: black;
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+.nav-link:hover, .navbar-brand:hover{
+    transform: scale(1.1); 
+    color: $secondary;
+}
+

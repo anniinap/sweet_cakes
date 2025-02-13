@@ -1,0 +1,27 @@
+@use '../abstract/mixins' as *;
+
+// recipe card 
+.custom-card {
+    background-color: #F5F5F5;
+    border: none;
+    @include rounded-card;
+    min-height: 380px;
+    max-width: 420px;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+    .custom-image {
+        width: 80%;
+        max-width: 280px; 
+    }
+    @include media(787px) {
+        margin-top: 8rem;
+    }
+
+    .difficulty-level {
+        i {
+        font-size: 0.9rem;
+        color: white;
+        }  
+    } 
+}
+

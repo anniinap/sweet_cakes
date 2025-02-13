@@ -1,0 +1,14 @@
+image: node:18
+
+pages:
+  stage: deploy
+  tags:
+    - docker
+  script:
+    - npm install
+    - npm run build
+    - rm -rf public/components
+    - mv dist/* public
+  artifacts:
+    paths:
+      - public

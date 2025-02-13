@@ -1,0 +1,19 @@
+// Mukautetut värit
+$primary: #C2C8A4;
+$secondary: #824D1A;
+$light: #ECE6DF;
+$dark: #000000;
+
+// Mukautetut fontit
+$font-family-base: "Poppins", sans-serif;
+$headings-font-family: "Sanchez", serif;
+
+// Tuodaan Bootstrapin SCSS modernilla tavalla
+@use "bootstrap" with (
+  $primary: $primary,
+  $secondary: $secondary,
+  $light: $light,
+  $dark: $dark,
+  $font-family-base: $font-family-base,
+  $headings-font-family: $headings-font-family
+);

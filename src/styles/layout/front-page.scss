@@ -1,0 +1,61 @@
+@use "../abstract/mixins" as *;
+@use "../abstract/variables" as *;
+
+.sweet-cakes-header-image {
+
+    @include background-image("/src/assets/images/background/background-image-small.jpg", 113vh);    
+    
+    @include media(768px, 1199px) {
+        @include background-image("/src/assets/images/background/background-image-medium.jpg", 113vh); 
+    }
+
+    @include media(1200px) {
+        @include background-image("/src/assets/images/background/background-image-big.jpg", 113vh); 
+    }
+}
+
+
+.sweet-cakes-header {
+    background-color: $semi-transparent-white;
+    @include rounded-card();
+    padding: 2rem;
+    margin-top: 2rem;
+    max-width: 600px;
+    
+    h3 {
+        margin: 0;
+    }
+    h1 {
+        padding-bottom: 0.5rem;
+    }
+    p {
+        padding: 0 1rem 0.5rem 1rem;
+    }
+    a {
+        padding: 0.5rem 2rem;
+    }
+    @include media(768px, 991px) {
+        padding: 4rem;
+    }
+
+    @include media(992px) {
+        padding: 5.5rem;
+    }
+}
+
+// recipe-section
+.recipe-section {
+    position: relative;
+    top: -6rem;
+    padding: 2rem 0;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+
+    h1 {
+        margin-bottom: 3rem;
+    }
+}
+
+#contact {
+    margin-top: -6rem;
+}

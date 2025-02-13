@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="./assets/style-fXG8flTk.css" as="style" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9b4cacfe56.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+    <title>About Us - Sweet Cakes</title>
+</head>
+
+<body>
+    <!-- About Us Section -->
+    <section id="about-background-image">
+        <div class="container">
+            <div id="navbar-container"></div>
+
+            <div class="row justify-content-center">
+                <div class="col-10 text-center mb-4 py-4">
+                    <h1 >About Us</h1>
+                    <p class="lead">We are passionate about baking and bringing the joy of cake to everyone!</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class=" col-10 col-md-6">
+                    <h3 class="text-secondary">Our Story</h3>
+                    <p>
+                        We are a small team of bakers who have a shared love for delicious cakes and creating unforgettable experiences. 
+                        Our journey began many years ago in a small kitchen, and today we are dedicated to sharing our passion through our recipes and tips. We believe that everyone should experience the joy of baking!
+                    </p>
+                </div>
+                <div class=" col-10 col-md-6">
+                    <h3 class="text-secondary">Our Mission</h3>
+                    <p>
+                        Our mission is simple: to make the art of baking accessible to everyone. We believe in the power of a homemade cake to bring people together, to celebrate, and to create memories. 
+                        Our goal is to provide easy-to-follow recipes, baking tips, and inspiration to help you bake the perfect cake every time.
+                    </p>
+                </div>
+                <div class="col-10 col-md-6">
+                <h3 class="text-secondary">Our Values</h3>
+                <p>
+                    We believe in quality, creativity, and community. Our cakes are made with the finest ingredients, and we constantly strive to push the boundaries of flavor and design. We value sustainability and aim to reduce waste wherever possible. Above all, we believe that baking is an art form that brings people together, and we are committed to making the world a sweeter place.
+                </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row justify-content-center my-4">
+            <div class="col-10 text-center">
+                <h3>Meet The Team</h3>
+                <div class="row">
+                    <div class="col-md-4 my-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Team member">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Alice Baker</h5>
+                                <p class="card-text">Head Baker and Recipe Creator</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Team member">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">John Dough</h5>
+                                <p class="card-text">Baking Expert and Cake Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Team member">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Emma Frost</h5>
+                                <p class="card-text">Marketing and Community Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+    
+       
+    <script>
+        fetch('../../components/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading the navigation:', error));
+
+            fetch('../../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading the navigation:', error));
+    </script>
+
+    <script type="module" src="/src/main.js"></script>
+    
+</body>
+
+</html>

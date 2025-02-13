@@ -1,0 +1,12 @@
+@use '../abstract/mixins' as *;
+@use "../abstract/variables" as *;
+
+#about-background-image {
+    @include background-image("/src/assets/images/background/recipe-background-image-medium.jpg", 70vh, $light-background-color);
+
+    .container {
+        position: relative;
+        z-index: 2;
+        padding-bottom: 2rem;
+    }
+}

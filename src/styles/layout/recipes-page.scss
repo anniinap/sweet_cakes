@@ -1,0 +1,13 @@
+@use '../abstract/mixins' as *;
+@use "../abstract/variables" as *;
+
+#recipes-header-image {
+    @include background-image("/src/assets/images/background/background-image-big.jpg", 50vh, $light-background-color-40);
+}
+
+#recipes-header {
+    position: relative;
+    z-index: 2;
+}
+
+
